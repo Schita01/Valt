@@ -2,29 +2,26 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AbonimentsModule } from './modules/aboniments/aboniments.module';
-import { AboutUsModule } from './modules/about-us/about-us.module';
-import { GamesModule } from './modules/games/games.module';
-import { RouterModule } from '@angular/router';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SharedModule } from './modules/shared/shared.module';
+import { ContactComponent } from './pages/contact/contact.component';
+import { ProjectsComponent } from './pages/Connections/connections.component';
+import {rewardsComponent} from "./pages/rewards/rewards.component";
+import {SharedModule} from "./pages/shared/shared.module";
+import {HomeComponent} from "./pages/home/home.component";
 
 @NgModule({
   declarations: [
-    AppComponent
-    ],
+    AppComponent,
+    ContactComponent,
+    ProjectsComponent,
+    rewardsComponent,
+    HomeComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AbonimentsModule,
-    AboutUsModule,
-    GamesModule,
-    RouterModule,
-    SharedModule,
-    BrowserAnimationsModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-  

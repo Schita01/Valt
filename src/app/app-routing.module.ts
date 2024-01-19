@@ -1,28 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import {HomeComponent} from "./pages/home/home.component";
+import {ContactComponent} from "./pages/contact/contact.component";
+import {ProjectsComponent} from "./pages/Connections/connections.component";
+import {rewardsComponent} from "./pages/rewards/rewards.component";
 
 const routes: Routes = [
-  {
-    path: 'aboniments',
-    loadChildren: () => import('./modules/aboniments/aboniments.module').then(m => m.AbonimentsModule)
-  },
-  {
-    path: 'contacts',
-    loadChildren: () => import('./modules/about-us/about-us.module').then(m => m.AboutUsModule)
-  },
-  {
-    path: 'games',
-    loadChildren: () => import('./modules/games/games.module').then(m => m.GamesModule)
-  },
-  {
-    path: 'main',
-    loadChildren: () => import('./modules/main/main.module').then(m => m.MainModule)
-  },
-  {
-    path: '',
-    redirectTo: 'main',
-    pathMatch: 'full'
-  }
+  {path: 'home', component: HomeComponent},
+  {path: 'contact', component: ContactComponent},
+  {path: 'projects', component: ProjectsComponent},
+  {path: 'rewards', component: rewardsComponent},
+  {path: '', redirectTo: 'home', pathMatch: 'full'}
 ];
 
 @NgModule({
