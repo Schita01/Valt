@@ -1,13 +1,24 @@
 <header>
     <div class="container">
-        <a class="logo" routerLink="">LOGO</a>
-
-        <ul class="list">
-            <li><a class="nav-text"  routerLink="/home" routerLinkActive="active">Home</a></li>
-            <li><a class="nav-text"  routerLink="/rewards" routerLinkActive="active">Rewards</a></li>
-            <li><a class="nav-text"  routerLink="" routerLinkActive="active">Connections</a></li>
-            <li><a class="nav-text"  routerLink="" routerLinkActive="active">About</a></li>
-        </ul>
-        <button class="blue-btn">Sign Up</button>
+      <a class="logo" routerLink=""><img src="/assets/Valt logo.png" alt=""></a>
+  
+      <label for="check">
+        <input (click)="navChange()" type="checkbox" id="check"/> 
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <!-- <img (click)="navChange()" class="hamburger-icon" src="/assets/menuwhite.svg" alt=""> -->
+  
+      <ul [ngClass]="{'list': true, 'open': isDroppedDown}">
+        <li><a (click)="navChange()" class="nav-text" routerLink="/home" routerLinkActive="active">Home</a></li>
+        <li><a (click)="navChange()" class="nav-text" routerLink="/rewards" routerLinkActive="active">Rewards</a></li>
+        <li><a (click)="navChange()" class="nav-text" routerLink="/connections" routerLinkActive="active">Connections</a></li>
+        <li><a (click)="navChange()" class="nav-text" routerLink="/about" routerLinkActive="active">About</a></li>
+      </ul>
+  
+      <button class="blue-btn">Sign Up</button>
     </div>
-</header>
+  </header>
+
+  

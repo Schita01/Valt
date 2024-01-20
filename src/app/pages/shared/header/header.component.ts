@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  
+
+  isDroppedDown:boolean = false;
+
+  navChange(){
+    this.isDroppedDown = !this.isDroppedDown
+  }
 }
